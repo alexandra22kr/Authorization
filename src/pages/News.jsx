@@ -25,7 +25,7 @@ class News extends Component {
     render() {
         return(
             <section className="section">
-                <PageHeadline text="Top headlines from TechCrunch" color="has-text-primary" />
+                <PageHeadline text="Top headlines from TechCrunch" color="has-text-warning" />
                 <NewsList news={this.props.news} />
             </section>
         )

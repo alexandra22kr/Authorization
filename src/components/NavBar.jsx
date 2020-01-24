@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="navbar is-primary">
+    <nav className="navbar has-background-warning">
       <div className="navbar-menu">
         <div className="navbar-start">
           <Link to='/' className="navbar-item">Home</Link>
