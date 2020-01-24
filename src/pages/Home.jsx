@@ -1,14 +1,28 @@
-import React from "react";
+import React, { Component, useState } from "react";
+import { connect } from "react-redux";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 
-const News = () => {
-  return (
-    <>
-      <Header />
-      <NavBar />
-    </>
-  );
-};
+class News extends Component {
+  render() {
+    return (
+      <section className="section">
 
-export default News;
+      </section>
+    );
+  }
+}
+
+const mapStateToProps = state => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(News);

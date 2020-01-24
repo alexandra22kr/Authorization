@@ -14,16 +14,17 @@ export function newsIsLoading(bool) {
     };
 }
 
-export function newsFetchDataSuccess(docs) {
+export function newsFetchDataSuccess(news) {
     return {
         type: NEWS_FETCH_DATA_SUCCESS,
-        docs
+        news
     };
 }
 
 export function newsFetchData(url) {
     return (dispatch) => {
         dispatch(newsIsLoading(true));
+        console.log('url', url);
 
             fetch(url) 
             .then((response) => {
@@ -36,8 +37,9 @@ export function newsFetchData(url) {
             })
             .then((response) => response.json())
             .then((news) => {
-                dispatch(newsFetchDataSuccess(news))
+                dispatch(newsFetchDataSuccess(news.articles))
+                console.log('data', news);
             })
-            .catch(() => dispatch(actionsHaveErrored(true)));
+            .catch(() => dispatch(newsHasErrored(true)));
     };
 }
