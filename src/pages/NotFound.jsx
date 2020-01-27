@@ -1,8 +1,7 @@
 import React from "react";
 import PageHeadline from '../components/PageHeadline';
 
-const NotFound = () => {
-  return (
+const NotFound = () => (
     <section className="section">
       <div className="container">
       <PageHeadline text="404 - Page not Found" />
@@ -10,8 +9,7 @@ const NotFound = () => {
           Sorry, the page you were looking for could not be found...
         </h2>
       </div>
-    </section>
-  );
-};
+    </section> 
+)
 
 export default NotFound;

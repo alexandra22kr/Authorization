@@ -1,11 +1,5 @@
-import {
-    NEWS_FETCH_DATA_SUCCESS,
-    NEWS_IS_LOADING,
-    NEWS_HAS_ERRORED
-} from '../constants';
-
 const initialState = [{
-    user: 'admin',
+    login: 'admin',
     password: '12345'
 }];
 

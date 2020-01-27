@@ -15,9 +15,11 @@ const Form = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("state users", users);
-    dispatch(logIn(userSubmit));
-    history.push('/profile');
+
+    if (users.find(user => JSON.stringify(user) === JSON.stringify(userSubmit))) {
+      dispatch(logIn(userSubmit));
+      history.push('/profile');
+    }
   };
 
   const onChangeInput = e => {
@@ -25,10 +27,9 @@ const Form = () => {
       if (key === e.target.name)
         setUser({
           ...userSubmit,
-          [e.target.name]: e.target.value
+          [e.target.name]: e.target.value.trim()
         });
     }
-    console.log("state", userSubmit);
   };
 
   return (
