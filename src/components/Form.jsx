@@ -1,5 +1,10 @@
 import React, { Component, useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
+import { logIn } from '../actions/session';
+
+
 
 const Form = ({ users }) => {
   const [userSubmit, setUser] = useState({
@@ -7,9 +12,12 @@ const Form = ({ users }) => {
     password: ""
   });
 
+  const dispatch = useDispatch();
+
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("users", users);
+    // console.log("users", users);
+    dispatch(logIn(userSubmit));
   };
 
   const onChangeInput = e => {

@@ -11,9 +11,3 @@ export function session(state = false, action) {
             return state;
     }
 } 
-
-export function logOut() {
-  return {
-    type: LOG_OUT,
-  }
-}

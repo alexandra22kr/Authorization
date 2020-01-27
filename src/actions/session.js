@@ -1,6 +1,8 @@
 import { LOG_IN_SUCCESS, LOG_IN_ERROR, LOG_OUT } from '../constants';
 
 export function logIn(user) {
+    console.log('...user', user);
+
     return {
         type: LOG_IN_SUCCESS,
         user
