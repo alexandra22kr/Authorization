@@ -30,7 +30,7 @@ const NewsItem = ({ title, author, content, description, urlToImage }) => {
 
 export default NewsItem;
 
-{
+
   /* <div class="tile is-ancestor">
 <div class="tile is-4 is-vertical is-parent">
   <div class="tile is-child box">
@@ -78,4 +78,4 @@ export default NewsItem;
   </div>
 </div>
 </div> */
-}
+

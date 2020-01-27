@@ -1,16 +1,12 @@
 import { LOG_IN_SUCCESS, LOG_IN_ERROR, LOG_OUT } from '../constants';
 
-const initialState = [
-    {
-        user: 'admin',
-        password: '12345'
-    }
-];
-
-export function logIn(state = {}, action) {
+export function session(state = true, action) {
     switch (action.type) {
-        case NEWS_HAS_ERRORED:
-            return action.hasErrored;
+        case LOG_IN_SUCCESS:
+            // if()
+            return true;
+        case LOG_IN_ERROR || LOG_OUT:
+            return false;
         default:
             return state;
     }
