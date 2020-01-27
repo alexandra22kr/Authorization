@@ -1,23 +1,23 @@
-import React, { Component, useState } from "react";
-import { Redirect, Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { connect } from "react-redux";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import { logIn } from '../actions/session';
 
-
-
-const Form = ({ users }) => {
+const Form = () => {
   const [userSubmit, setUser] = useState({
     login: "",
     password: ""
   });
 
+  let history = useHistory();
+  const users = useSelector(state => state.users);
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
-    // console.log("users", users);
+    console.log("state users", users);
     dispatch(logIn(userSubmit));
+    history.push('/profile');
   };
 
   const onChangeInput = e => {
@@ -69,7 +69,7 @@ const Form = ({ users }) => {
           </div>
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <button class="button is-warning">Login</button>
+              <button className="button is-warning">Log in</button>              
             </p>
           </div>
         </form>
