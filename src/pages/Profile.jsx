@@ -1,13 +1,10 @@
-import React from 'react';
-import Header from '../components/Header';
+import React from "react";
+import PageHeadline from "../components/PageHeadline";
 
-
-const News = () => {
-    return(
-        <>
-            
-        </>
-    )
-}
+const News = () => (
+  <section className="section">
+    <PageHeadline text="Profile" color="has-text-warning" />
+  </section>
+);
 
 export default News;

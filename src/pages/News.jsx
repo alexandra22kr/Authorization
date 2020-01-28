@@ -1,7 +1,5 @@
 import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
-import Header from '../components/Header';
-import NavBar from '../components/NavBar';
 import NewsList from '../components/NewsList';
 import { newsFetchData } from '../actions/news'; 
 import { connect } from 'react-redux';
@@ -12,9 +10,6 @@ const url = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=ec3b
 class News extends Component {
     constructor(props) {
         super(props)
-
-        // this.newsFetchData = this.newsFetchData.bind(this);
-
     }
 
     componentDidMount() {
